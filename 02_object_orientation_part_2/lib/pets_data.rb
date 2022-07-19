@@ -1,3 +1,26 @@
+$cats_data = [
+  {
+    name:"rose",
+    age: "11 years",
+    breed: "Domestic longhair",
+    image_url: false,
+    indoor: true
+  },
+  {
+    name:"Luke",
+    age: "3 years",
+    breed: "Domestic longhair",
+    image_url: false,
+    indoor: true
+  },
+  {
+    name:"Leia",
+    age: "3 years",
+    breed: "Domestic longhair",
+    image_url: false,
+    indoor: true
+  }
+]
 $dogs_data = [
   {
     name: "Olivia",	
