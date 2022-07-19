@@ -7,6 +7,7 @@ require "pry"
 require "colorize"
 
 # use require_relative to load up our code in the lib directory
+require_relative "../lib/handler.rb"
 require_relative "../lib/pet.rb"
 require_relative "../lib/cat.rb"
 require_relative "../lib/dog.rb"
@@ -21,4 +22,5 @@ def reload
   load "lib/pet.rb"
   load "lib/cat.rb"
   load "lib/dog.rb"
+  seed
 end

@@ -1,20 +1,19 @@
-class Dog
-  attr_accessor :name, :age, :breed, :image_url, :last_fed_at, :last_walked_at
-  # ✅ 1. class variable: all - holds all dogs we have saved
+class Dog < Pet
 
-  # initialize with an optional hash of attributes
-  def initialize(attributes = {})
-    attributes.each do |attribute, value|
-      self.send("#{attribute}=", value)
-    end
-  end
 
-  # ✅ 2. class method: 'all' - retrieves the value of the class variable
+  def self.find_dog(name)
+    @@all.find{|d| d.name == name }
+  end 
 
+  def self.list_all_names
+    @@all.map{|d| d.name}
+  end 
 
   # ✅ 3. instance method: 'walk' - updates the dog's last_walked_at property to the current time
   
-  # ✅ 4. instance method: 'feed' - updates the dog's last_fed_at property to the current time
+  def walk
+    @last_walked_at = Time.now
+  end 
 
   # print details about a dog (including the last walked at and last fed at times)
   def print
@@ -27,6 +26,10 @@ class Dog
     puts "  Last fed at: #{self.last_fed_at}"
     puts
   end
+
+  def fave_snack
+    @@fave_snack
+  end 
 
   # ✅ 5. private method: 'formatted_name' - returns the name of the dog color coded to indicate whether they are hungry or need a walk
 
