@@ -1,8 +1,10 @@
 class Pet 
+    #Super class to Dog and Cat
+    #Pet has a one-to-many relationship with Owner
     attr_accessor :name, :age, :breed, :image_url, :last_fed_at
 
     @@all = []
-
+    #Mass assignment example
     def initialize(attributes = {})
         attributes.each do |attribute, value|
           self.send("#{attribute}=", value)
@@ -10,6 +12,7 @@ class Pet
         @@all << self
     end
 
+    #.Class methods
     def self.all
         @@all
     end
@@ -18,12 +21,7 @@ class Pet
         @@all.map{|p| p.name}
     end 
 
-    def self.average_age
-        sum = self.all.map{|p|p.age.split(" ")[0].to_f}.sum 
-        sum/2    
-    end 
-
-
+    #Instance methods
     def print
         puts
         puts self.name.green
@@ -51,6 +49,7 @@ private
     
 
     def format_time(time)
+        #strftime formats the date acording to the directives in the given format string
         time && time.strftime('%l:%M %p on %Y-%m-%d')
     end
 end 

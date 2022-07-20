@@ -1,3 +1,63 @@
+$owner_data = [
+  {
+    username:"grannie52", 
+    email:"cool_grannie@gmail.com", 
+    address:"999 9th st Seattle WA 90000", 
+    phone: "(123)-567-8309"
+  },
+  {
+    username:"Dorian592", 
+    email:"blue_boy@gmail.com", 
+    address:"543 dr Ne Seattle WA 90000", 
+    phone:"(123)-456-7890"
+  },
+  {
+    username: "ada_likes_2_code", 
+    email:"ada_lovelace@gmail.com", 
+    address:"0909 PL SW Seattle Wa 90000", 
+    phone:"(999)-112-3987"
+  },
+]
+$handler_data = [
+  {
+    name:"Astin Gamgee" ,
+    email:"pupper_lover@gmail.com",
+    phone:"(098)-123-8766"
+  },  
+  {
+    name:"Sal Baker" ,
+    email:"sal_is_a_baker@gmail.com",
+    phone:"(333)-209-1234"
+  },
+  {
+    name:"Liv Arwen" ,
+    email:"wood_elf@gmail.com",
+    phone:"(490)-000-7767"
+  },
+]
+$cats_data = [
+  {
+    name:"rose",
+    age: "11 years",
+    breed: "Domestic longhair",
+    image_url: false,
+    indoor: true
+  },
+  {
+    name:"Luke",
+    age: "3 years",
+    breed: "Domestic longhair",
+    image_url: false,
+    indoor: true
+  },
+  {
+    name:"Leia",
+    age: "3 years",
+    breed: "Domestic longhair",
+    image_url: false,
+    indoor: true
+  }
+]
 $dogs_data = [
   {
     name: "Olivia",	
