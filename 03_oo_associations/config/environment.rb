@@ -7,11 +7,15 @@ require "pry"
 require "colorize"
 
 # use require_relative to load up our code in the lib directory
-require_relative "../lib/helper_methods.rb"
-require_relative "../lib/savable.rb"
+require_relative "../lib/pet.rb"
+require_relative "../lib/cat.rb"
 require_relative "../lib/dog.rb"
+require_relative "../lib/pets_data.rb"
+require_relative "../lib/helper_methods.rb"
+require_relative "../lib/handler.rb"
+require_relative "../lib/owner.rb"
 require_relative "../lib/walk.rb"
-require_relative "../lib/dogs_data.rb"
+
 
 # add a method that will reload the lib/dog.rb file so we can 
 # interact with the most recent version without restarting the console
