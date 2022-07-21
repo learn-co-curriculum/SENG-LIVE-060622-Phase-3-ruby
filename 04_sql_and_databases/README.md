@@ -11,7 +11,3 @@
 - [ ] Observe using SQL to communicate with a database
 - [ ] Explain what an ORM is and why we use Active Record
 
-### Deliverables
-- Make SQL query to retrieve all dogs from database
-- Make SQL query to retrieve all feedings of a particular dog
-- Make SQL query to JOIN tables to support a many to many relationship
