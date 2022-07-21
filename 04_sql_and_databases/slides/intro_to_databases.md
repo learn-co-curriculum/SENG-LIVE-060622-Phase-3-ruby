@@ -118,6 +118,10 @@ Install [DB Browser for SQLite](https://sqlitebrowser.org/)
 ## SQL
 SQL(Structured Query Language). A language that allows us to manipulate databases. 
 
+SQLite is a library that will allow us to create a Relational SQL database. 
+
+Relational database is a database of tables and rows with data points that relate to each other. Tables have unique Primary keys and columns that data of varying types.
+
 
 
 #### Delete tables
