@@ -174,10 +174,10 @@ VALUES ('Adam', '000 dr sw San Francisco CA 90000', 'cyberpunk999@gmail.com', '0
 
 
 INSERT INTO pets(name, age, breed, favorite_treats, image_url, owner_id) 
-VALUES ('uke', '2', 'domestic Longhair', 'bacon', 'https://res.cloudinary.com/dnocv6uwb/image/upload/v1631229064/zx6CPsp_d_utkmww.webp', 2);
+VALUES ('Luke', '2', 'domestic longhair', 'bacon', 'https://res.cloudinary.com/dnocv6uwb/image/upload/v1631229064/zx6CPsp_d_utkmww.webp', 2);
 
 INSERT INTO pets(name, age, breed, favorite_treats, image_url, owner_id) 
-VALUES ('rose', '11', 'domestic Longhair', 'house plants', 'https://res.cloudinary.com/dnocv6uwb/image/upload/v1631229038/EEE90-E50-25-F0-4-DF0-98-B2-0-E0-B6-F9-BAA89_menwgg.jpg', 1);
+VALUES ('rose', '11', 'domestic longhair', 'house plants', 'https://res.cloudinary.com/dnocv6uwb/image/upload/v1631229038/EEE90-E50-25-F0-4-DF0-98-B2-0-E0-B6-F9-BAA89_menwgg.jpg', 1);
 
 
 INSERT INTO pets(name, age, breed, favorite_treats, image_url, owner_id) 
@@ -206,6 +206,9 @@ UPDATE pets
 SET age = 12
 WHERE name = 'rose';
 
+UPDATE pets
+SET favorite_treats = 'cheese'
+
 
 DELETE FROM pets WHERE name = 'Chop';
 
@@ -218,7 +221,7 @@ DELETE FROM pets WHERE name = 'Chop';
 ```
 SELECT pets.name, owners.name 
 FROM pets
-INNER JOIN owners ON pets.owner_id = owners.id;
+JOIN owners ON pets.owner_id = owners.id;
 ```
 
 #### many-to-many
