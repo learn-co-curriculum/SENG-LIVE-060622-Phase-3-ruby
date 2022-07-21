@@ -118,19 +118,6 @@ Install [DB Browser for SQLite](https://sqlitebrowser.org/)
 ## SQL
 SQL(Structured Query Language). A language that allows us to manipulate databases. 
 
-#### Create the Dogs Table
-
-```sql
-CREATE TABLE dogs(
-  id INTEGER PRIMARY KEY,
-  name TEXT,
-  age TEXT,
-  breed TEXT,
-  favorite_treats TEXT,
-  last_fed_at DATETIME,
-  last_walked_at DATETIME
-);
-```
 
 
 #### Delete tables
