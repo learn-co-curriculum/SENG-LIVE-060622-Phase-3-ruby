@@ -22,36 +22,16 @@ presentation:
 <!-- slide data-separator="^\n\n\n"
          data-separator-vertical="^\n\n" data-separator-notes="^Note:"-->
 
-## Key Concepts for the day:
 
-- The benefit of databases in applications
-- Relationship between a database and an API
-- Domain modeling
-- Mapping columns and rows to classes and instances
-- Basic SQL queries
-- Primary Keys
-- Foreign Keys
 
 
 
 
 <!-- slide -->
 
-## Agenda
-
-- Part 1 
-  - Explanation  database benefits 
-  and a bit of a preview of where we're going with SQL moving forward
-  - See how what we learned in homework can be applied to the Dog Walker CLI app
-- Part 2 
-  - Hop into Google sheets and start talking about database relationships in the context of different domains
-  - practice deciding where to put foreign keys
 
 
-<!-- slide -->
-
-## Putting things in Context
-Over the last few days we've been building out our CLI applications and one of the problems we've had is that the dogs that we create while we run the program only last while the program is running. We need to create them again every time the program runs.
+## Putting things in Context.
 
 Databases allow us to store our data outside of our code and we can do CRUD and have it persist to the next session.
 
@@ -107,7 +87,7 @@ At the end of the phase, we'll be building out an API that will sit between our 
 
 ## Rover Clone
 
-### Key Features we're going to add to our Dog Walker CLI:
+### Key Features we're going to add to our Rover Clone:
 
 - Add persistence
   - A Read (SELECT) operation to retrieve persisted pets
@@ -130,22 +110,13 @@ The Following Slides outline the configuration changes necessary to integrate a 
 bundle add sqlite3
 ```
 
+Install [DB Browser for SQLite](https://sqlitebrowser.org/)
+
 
 <!-- slide -->
 
-## DB Config
-
-### Add a Database called dog_walker.db
-
-From the demo directory in the terminal:
-
-```bash
-sqlite3 db/dog_walker.db
-```
-
-<!-- slide -->
-
-## DB Config
+## SQL
+SQL(Structured Query Language). A language that allows us to manipulate databases. 
 
 #### Create the Dogs Table
 
