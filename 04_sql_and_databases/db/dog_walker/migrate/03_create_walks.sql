@@ -1,4 +1,0 @@
-CREATE TABLE walks(
-  id INTEGER PRIMARY KEY,
-  time DATETIME
-);

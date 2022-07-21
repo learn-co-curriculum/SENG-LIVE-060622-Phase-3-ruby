@@ -251,8 +251,7 @@ INSERT INTO handlers (name, email, phone)
 VALUES ('gannie', 'grannie52@gmail.com', '1239087654');
 INSERT INTO handlers (name, email, phone) 
 VALUES ('dorian', 'blue_boy@gmail.com', '8887776666');
-INSERT INTO requests (name, email, phone) 
-VALUES ('dorian', 'blue_boy@gmail.com', '8887776666');
+
 
 
 
