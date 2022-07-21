@@ -125,7 +125,7 @@ Relational database is a database of tables and rows with data points that relat
 
 
 #### Delete tables
-DROP TABLE dogs;
+DROP TABLE pets;
 
 #### Create the Tables for pets and owners 
 
