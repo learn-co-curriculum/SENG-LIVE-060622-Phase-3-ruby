@@ -173,3 +173,10 @@ $owner_data = [
   ]
   
 
+
+
+  $cats_data.each{|c| Pet.create(c)}
+  $dogs_data.each{|d| Pet.create(d)}
+  $handler_data.each{|h| Handler.create(h)}
+
+puts 'Done!'
