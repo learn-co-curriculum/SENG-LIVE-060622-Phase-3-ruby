@@ -22,3 +22,4 @@ gem "activerecord", "~> 6.1"
 
 # gives us access to rake tasks like `rake db:migrate`
 gem "sinatra-activerecord", "~> 2.0"
+gem "pry", "~> 0.14.1"
