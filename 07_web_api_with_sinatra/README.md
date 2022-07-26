@@ -10,77 +10,7 @@
 - [ ] Explain what params are and how to access them
 - [ ] Observe using Postman to test server-side routes
 
-## Agenda
-
-- Introducing Sinatra  
-  - Introduce our project build 
-  - Discuss Project Requirements for phase 3
-  - Intro to Sinatra
-  - Review of HTTP and request Response Cycle and how it applies to Sinatra
-- Navigating Starter Code
-  - getting familiar with the file structure and highlighting similarities and differences from what you've seen thus far
-  - MVC Design Pattern
-  - Building our first API endpoint
-  - Making a fetch request from React 
-- Important Gotchas/Debugging and Developer tools
-  - How to use Postman to debug request/response cycle
-  - How to use `binding.pry`
-  - / required at beginning of routes
-  - how to find a running sinatra server and kill it (if you forgot to shut one down from before and can't find it)
-
----
-
-# Project Preview
-
-This is a little picture of the application we'll be building over the next few days!
-![Dog Walker Application](https://res.cloudinary.com/dnocv6uwb/image/upload/v1627627105/dog-walker-app-demo-13fps_nwstsn.gif)
-
 --- 
-
-## Requirements
-
-- Use Active Record to interact with a database.
-- Have a minimum of two models with a one-to-many relationship.
-- Create API routes in Sinatra that handles at least three different CRUD actions for at least one of your Active Record models.
-- Build a separate React frontend application that interacts with the API to perform CRUD actions.
-- Use good OO design patterns. You should have separate classes for each of your models, and create instance and class methods as necessary.
-
-For example, build a todo list application with a React frontend interface and a Sinatra backend API, where a user can:
-
-- **Create** a new todo
-- **Read** a list of all todos
-- **Update** an individual todo
-- **Delete** a todo
-
-A `Todo` can be tagged with a `Category`, so that each todo *belongs to* a category and each category *has many* todos.
-
---- 
-
-## Getting Started
-
-### Backend Setup
-
-- You'll want to fork and clone the [starter repo for your Sinatra API](https://github.com/learn-co-curriculum/phase-3-sinatra-react-project).
-
-```bash
-git clone https://github.com/yourGitHubUsername/phase-3-sinatra-react-project
-```
-
-- move into the project directory and install the dependencies.
-```bash
-cd phase-3-sinatra-react-project
-bundle install
-```
-
-
-- Back in our code editor, we can run `bundle install` to install the dependencies for our backend.
-- You'll be able to start a local web server so that you can send requests to your API from Postman or a React client using the following command:
-
-```bash
-rake server
-```
-
----
 
 ## Understanding Sinatra
 
@@ -314,15 +244,6 @@ When you work on your project, it's recommended that your react application be i
 If we look again at our dog walker application again:
 ![Dog Walker Application](https://res.cloudinary.com/dnocv6uwb/image/upload/v1627627105/dog-walker-app-demo-13fps_nwstsn.gif)
 
-#### What different requests are we going to need to send from our frontend to our API backend?
-
----
-
-## Break Time
-
-<iframe width={16*60} height={9*60} src="https://www.youtube.com/embed/XoxlYGS0mb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
----
 
 ## Exploring the Starter Codebase 
 
@@ -349,17 +270,6 @@ Connecting the diagram to our HTTP request/response cycle, we can say that the R
 
 ---
 
-## Restaurant Analogy
-
-[![Restaurant Analogy](https://image.slidesharecdn.com/introductiontolightninglifecyclevirtualmeetup-190605220136/95/introduction-to-lightning-lifecycle-19-638.jpg?cb=1559772205)](https://blog.yechiel.me/welcome-to-the-mvc-restaurant-fb1709047914)
-
-- Models <=> Chefs
-- Controllers <=> Waiters
-- Views <=> Tables/Silverware/Plates/other presentational stuff (React in our case)
-
-This [blog post on the MVC Restaurant](https://blog.yechiel.me/welcome-to-the-mvc-restaurant-fb1709047914) gives a fun explanation of the analogy in more detail.
-
----
 
 ## Key Concepts:
 
@@ -609,25 +519,3 @@ When we create a dog, we'll send this as the raw body in JSON format:
     "image_url": "https://res.cloudinary.com/dnocv6uwb/image/upload/v1609370238/dakota-and-lennon-square-medium-compressed_qpwki6.jpg"
 }
 ```
-
-## Deliverables:
-
-Build out the following endpoints:
-
-| Endpoint | info from client in request | info from server in response |
-|---|---|---|
-| `get '/walks'` | none | an array of objects (in JSON format) containing walks, their ids and formatted_time |
-| `post '/walks'` | the time of the walk and the dog_ids of the dogs on the walk | the walk in json format (including the formatted_time) |
-| `delete '/walks/:id'` | none (except the id of the walk to be deleted) | the deleted walk in JSON format (including the formatted_time) |
-
-## How to Test
-- You can test out your progress by using Postman to send requests to the API 
-  - make sure that `rake server` is running
-  - verifying the responses are what you expect
-  - You can also check the `rake server` logs after sending a request through Postman to see the SQL queries fired off
-  - check the SQLite explorer to see the impact on your database.
-- You can also boot up the react client using `npm start`
-  - keep an eye on the network tab in the chrome devtools, this will show you the requests that are being sent and the responses received as well.
-  - If you click on the navbar link to `/walks` you should see a list of walks there if you've completed the first endpoint.
-  - If you fill in the form in the react client to create a walk, it will appear in the browser if the endpoint is properly configured
-  - If you click on the trash can icon in the react client, it should remove the walk from the database. 
