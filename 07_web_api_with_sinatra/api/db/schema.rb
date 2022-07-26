@@ -10,29 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_27_154533) do
+ActiveRecord::Schema.define(version: 2022_07_26_003119) do
 
-  create_table "dog_walks", force: :cascade do |t|
-    t.boolean "pooped"
-    t.integer "dog_id", null: false
-    t.integer "walk_id", null: false
-    t.index ["dog_id"], name: "index_dog_walks_on_dog_id"
-    t.index ["walk_id"], name: "index_dog_walks_on_walk_id"
-  end
-
-  create_table "dogs", force: :cascade do |t|
+  create_table "handlers", force: :cascade do |t|
+    t.string "email"
+    t.integer "phone"
     t.string "name"
-    t.date "birthdate"
+  end
+
+  create_table "owners", force: :cascade do |t|
+    t.string "email"
+    t.string "address"
+    t.integer "phone"
+    t.string "username"
+  end
+
+  create_table "pets", force: :cascade do |t|
     t.string "breed"
+    t.string "name"
     t.string "image_url"
+    t.integer "age"
+    t.integer "owner_id"
   end
 
-  create_table "walks", force: :cascade do |t|
+  create_table "requests", force: :cascade do |t|
+    t.string "request"
     t.datetime "time"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.integer "pet_id"
+    t.integer "handler_id"
   end
 
-  add_foreign_key "dog_walks", "dogs"
-  add_foreign_key "dog_walks", "walks"
 end
