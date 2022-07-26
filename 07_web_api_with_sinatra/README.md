@@ -502,4 +502,5 @@ Now, we only see the search process and no other process containing `rackup`. At
 ```
 If you see something like the above then you're good to go!
 
-
+Warm up question:
+What is the difference between an API, server and database
