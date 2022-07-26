@@ -503,19 +503,3 @@ Now, we only see the search process and no other process containing `rackup`. At
 If you see something like the above then you're good to go!
 
 
----
-
-## Sending Requests via Postman
-
-Try opening [this workspace](https://www.postman.com/dakota27/workspace/dogwalkerapplication/request/3907819-afb45b42-8a10-4ca2-9e59-4a5a2c45048a) in Postman to get the details for the requests we want to send.
-
-When we create a dog, we'll send this as the raw body in JSON format:
-
-```json
-{
-    "name": "Baby Lennon",
-    "birthdate": "2020-08-31",
-    "breed": "Pomeranian",
-    "image_url": "https://res.cloudinary.com/dnocv6uwb/image/upload/v1609370238/dakota-and-lennon-square-medium-compressed_qpwki6.jpg"
-}
-```
